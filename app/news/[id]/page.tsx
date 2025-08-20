@@ -4,11 +4,11 @@ import React from "react"
 import { Button, Link } from "@heroui/react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { ArrowLeft, Calendar, User, Tag, ThumbsUp, ThumbsDown } from 'lucide-react'
+import { ArrowLeft, Calendar, Tag, ThumbsDown, ThumbsUp, User } from 'lucide-react'
 import { Header } from "@/app/header";
 import { Footer } from "@/app/footer";
 
-import "tailwindcss/tailwind.css";
+import "@/styles/globals.css";
 
 export default function NewsArticlePage() {
     const article = {
