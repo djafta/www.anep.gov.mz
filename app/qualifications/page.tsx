@@ -231,14 +231,14 @@ export default function QualificationsPage() {
             </div>
             <button
               aria-label="Previous slide"
-              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 transition-colors rounded-full p-1 sm:p-2"
+              className="absolute left-3 sm:left-6 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 transition-colors rounded-full p-1 sm:p-2"
               onClick={prevCarousel}
             >
               <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-gray-800" />
             </button>
             <button
               aria-label="Next slide"
-              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 transition-colors rounded-full p-1 sm:p-2"
+              className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 transition-colors rounded-full p-1 sm:p-2"
               onClick={nextCarousel}
             >
               <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-gray-800" />
