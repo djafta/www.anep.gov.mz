@@ -19,7 +19,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar className=" px-0" height={60} maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
+    <Navbar className=" px-0 z-50" height={60} maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarBrand>
           <Link href={"/"}>
