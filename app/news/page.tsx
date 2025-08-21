@@ -27,12 +27,9 @@ type FeaturedArticle = {
 export default function NewsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Todas");
-
+  const [newsArticles] = useState<NewsArticle[]>([]);
+  const [featuredArticle] = useState<FeaturedArticle | null>(null);
   const categories = ["Todas", "Educação", "Tecnologia", "Parcerias", "Eventos"];
-
-  const featuredArticle: FeaturedArticle | null = null;
-
-  const newsArticles: NewsArticle[] = [];
 
   const filteredArticles = newsArticles.filter(
     (article) =>
