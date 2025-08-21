@@ -19,12 +19,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Navbar
-      className=" px-0"
-      height={60}
-      maxWidth="full"
-      onMenuOpenChange={setIsMenuOpen}
-    >
+    <Navbar className=" px-0" height={60} maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarBrand>
           <Link href={"/"}>
@@ -35,38 +30,22 @@ export function Header() {
 
       <NavbarContent className="hidden md:flex gap-4" justify="center">
         <NavbarItem>
-          <Link
-            as={NextLink}
-            className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-            href="/about"
-          >
+          <Link as={NextLink} className="text-gray-600 hover:text-gray-900 text-sm font-medium" href="/about">
             Sobre
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            as={NextLink}
-            className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-            href="/licensing"
-          >
+          <Link as={NextLink} className="text-gray-600 hover:text-gray-900 text-sm font-medium" href="/licensing">
             Licenciamento
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            as={NextLink}
-            className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-            href="/qualifications"
-          >
+          <Link as={NextLink} className="text-gray-600 hover:text-gray-900 text-sm font-medium" href="/qualifications">
             Qualificações
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            as={NextLink}
-            className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-            href="/news"
-          >
+          <Link as={NextLink} className="text-gray-600 hover:text-gray-900 text-sm font-medium" href="/news">
             Notícias
           </Link>
         </NavbarItem>
@@ -91,59 +70,31 @@ export function Header() {
             Criar conta
           </Button>
         </NavbarItem>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-          className="md:hidden"
-        />
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"} className="md:hidden" />
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link
-            as={NextLink}
-            className="w-full text-gray-600 hover:text-gray-900"
-            href="/about"
-            size="lg"
-          >
+          <Link as={NextLink} className="w-full text-gray-600 hover:text-gray-900" href="/about" size="lg">
             Sobre
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link
-            as={NextLink}
-            className="w-full text-gray-600 hover:text-gray-900"
-            href="/licensing"
-            size="lg"
-          >
+          <Link as={NextLink} className="w-full text-gray-600 hover:text-gray-900" href="/licensing" size="lg">
             Licenciamento
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link
-            as={NextLink}
-            className="w-full text-gray-600 hover:text-gray-900"
-            href="/qualifications"
-            size="lg"
-          >
+          <Link as={NextLink} className="w-full text-gray-600 hover:text-gray-900" href="/qualifications" size="lg">
             Qualificações
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link
-            as={NextLink}
-            className="w-full text-gray-600 hover:text-gray-900"
-            href="/news"
-            size="lg"
-          >
+          <Link as={NextLink} className="w-full text-gray-600 hover:text-gray-900" href="/news" size="lg">
             Notícias
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link
-            as={NextLink}
-            className="w-full text-gray-600 hover:text-gray-900"
-            href="/sign-in"
-            size="lg"
-          >
+          <Link as={NextLink} className="w-full text-gray-600 hover:text-gray-900" href="/sign-in" size="lg">
             Entrar
           </Link>
         </NavbarMenuItem>

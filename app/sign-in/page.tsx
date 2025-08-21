@@ -40,9 +40,7 @@ export default function LoginPage() {
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-            Entrar na sua conta ANEP
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Entrar na sua conta ANEP</h1>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <Input
               required
@@ -58,11 +56,7 @@ export default function LoginPage() {
               required
               className={"hidden"}
               endContent={
-                <button
-                  className="focus:outline-none"
-                  type="button"
-                  onClick={toggleVisibility}
-                >
+                <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
                   {isVisible ? (
                     <EyeOff className="text-2xl text-gray-400 pointer-events-none" />
                   ) : (
@@ -79,24 +73,14 @@ export default function LoginPage() {
               onChange={handleInputChange}
             />
             <div className="flex items-center justify-between">
-              <Checkbox
-                checked={formData.rememberMe}
-                name="rememberMe"
-                onChange={handleInputChange}
-              >
+              <Checkbox checked={formData.rememberMe} name="rememberMe" onChange={handleInputChange}>
                 Lembrar-me
               </Checkbox>
-              <Link
-                className="text-sm text-[#003B71] hover:underline"
-                href="https://iforgot.anep.gov.mz"
-              >
+              <Link className="text-sm text-[#003B71] hover:underline" href="https://iforgot.anep.gov.mz">
                 Esqueceu sua conta?
               </Link>
             </div>
-            <Button
-              className="w-full bg-[#003B71] text-white hover:bg-[#003B71]/90 transition-colors"
-              type="submit"
-            >
+            <Button className="w-full bg-[#003B71] text-white hover:bg-[#003B71]/90 transition-colors" type="submit">
               Entrar
             </Button>
           </form>
@@ -112,8 +96,7 @@ export default function LoginPage() {
       <footer className="bg-gray-50 border-t border-gray-200 py-3 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-sm text-gray-500 py-3">
-            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP).
-            Todos os direitos reservados.
+            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP). Todos os direitos reservados.
           </p>
         </div>
       </footer>

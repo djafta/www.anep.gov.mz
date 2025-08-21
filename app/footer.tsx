@@ -28,9 +28,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-gray-900">
-              Serviços
-            </h4>
+            <h4 className="font-semibold text-lg mb-6 text-gray-900">Serviços</h4>
             <ul className="space-y-4">
               <li>
                 <Link className="text-gray-600 hover:text-gray-900" href="#">
@@ -43,19 +41,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  className="text-gray-600 hover:text-gray-900"
-                  href="/licensing"
-                >
+                <Link className="text-gray-600 hover:text-gray-900" href="/licensing">
                   Licenciamento
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-gray-900">
-              Recursos
-            </h4>
+            <h4 className="font-semibold text-lg mb-6 text-gray-900">Recursos</h4>
             <ul className="space-y-4">
               <li>
                 <Link className="text-gray-600 hover:text-gray-900" href="#">
@@ -75,9 +68,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-gray-900">
-              Contacto
-            </h4>
+            <h4 className="font-semibold text-lg mb-6 text-gray-900">Contacto</h4>
             <ul className="space-y-4">
               <li className="flex items-center text-gray-600">
                 <Mail className="mr-2 h-5 w-5" /> info@anep.gov.mz
@@ -94,8 +85,8 @@ export function Footer() {
         </div>
         <div className="pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} Autoridade Nacional de Educação
-            Profissional (ANEP). Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Autoridade Nacional de Educação Profissional (ANEP). Todos os direitos
+            reservados.
           </p>
         </div>
       </div>

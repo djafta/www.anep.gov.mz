@@ -76,24 +76,16 @@ export default function FAQDetailPage() {
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <Link
-            className="text-[#003B71] hover:underline flex items-center mb-6"
-            href="/faq"
-          >
-            <ChevronLeft className="w-4 h-4 mr-1" /> Voltar para Perguntas
-            Frequentes
+          <Link className="text-[#003B71] hover:underline flex items-center mb-6" href="/faq">
+            <ChevronLeft className="w-4 h-4 mr-1" /> Voltar para Perguntas Frequentes
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            {faqDetail.question}
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">{faqDetail.question}</h1>
           <div
             dangerouslySetInnerHTML={{ __html: faqDetail.answer }}
             className="prose prose-lg max-w-none text-gray-700"
           />
           <div className="mt-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Esta resposta foi útil?
-            </h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Esta resposta foi útil?</h2>
             <div className="flex space-x-4">
               <Button
                 className="border-gray-300 hover:bg-gray-100 transition-colors"
@@ -112,16 +104,11 @@ export default function FAQDetailPage() {
             </div>
           </div>
           <div className="mt-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Perguntas relacionadas
-            </h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Perguntas relacionadas</h2>
             <ul className="space-y-2 ps-0 list-none">
               {faqDetail.relatedQuestions.map((q, index) => (
                 <li key={index}>
-                  <Link
-                    className="text-[#003B71] hover:underline"
-                    href={q.link}
-                  >
+                  <Link className="text-[#003B71] hover:underline" href={q.link}>
                     {q.question}
                   </Link>
                 </li>
@@ -134,26 +121,16 @@ export default function FAQDetailPage() {
       <footer className="bg-gray-50 border-t border-gray-200 py-12 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-sm text-gray-500 mb-4">
-            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP).
-            Todos os direitos reservados.
+            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP). Todos os direitos reservados.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link
-              className="text-gray-400 hover:text-[#003B71] transition-colors"
-              href="#"
-            >
+            <Link className="text-gray-400 hover:text-[#003B71] transition-colors" href="#">
               Termos de Uso
             </Link>
-            <Link
-              className="text-gray-400 hover:text-[#003B71] transition-colors"
-              href="#"
-            >
+            <Link className="text-gray-400 hover:text-[#003B71] transition-colors" href="#">
               Política de Privacidade
             </Link>
-            <Link
-              className="text-gray-400 hover:text-[#003B71] transition-colors"
-              href="#"
-            >
+            <Link className="text-gray-400 hover:text-[#003B71] transition-colors" href="#">
               Contato
             </Link>
           </div>

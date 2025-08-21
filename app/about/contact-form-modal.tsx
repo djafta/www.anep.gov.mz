@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  useDisclosure,
-} from "@heroui/modal";
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@heroui/modal";
 import { Button } from "@heroui/button";
 import { Input, Textarea } from "@heroui/input";
 
@@ -19,9 +12,7 @@ export function ContactFormModal() {
     message: "",
   });
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
     setFormData((prevState) => ({
@@ -38,34 +29,15 @@ export function ContactFormModal() {
 
   return (
     <>
-      <Button
-        className="bg-white text-[#003B71] hover:bg-gray-100"
-        color="primary"
-        size="lg"
-        onPress={onOpen}
-      >
+      <Button className="bg-white text-[#003B71] hover:bg-gray-100" color="primary" size="lg" onPress={onOpen}>
         Torne-se um Parceiro
       </Button>
-      <Modal
-        className="bg-white"
-        isOpen={isOpen}
-        scrollBehavior="inside"
-        size={"4xl"}
-        onClose={onClose}
-      >
+      <Modal className="bg-white" isOpen={isOpen} scrollBehavior="inside" size={"4xl"} onClose={onClose}>
         <ModalContent>
           <form onSubmit={handleSubmit}>
-            <ModalHeader className="flex flex-col gap-1">
-              Entre em Contato
-            </ModalHeader>
+            <ModalHeader className="flex flex-col gap-1">Entre em Contato</ModalHeader>
             <ModalBody>
-              <Input
-                required
-                label="Nome"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-              />
+              <Input required label="Nome" name="name" value={formData.name} onChange={handleInputChange} />
               <Input
                 required
                 label="Email"

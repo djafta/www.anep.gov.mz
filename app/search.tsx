@@ -9,10 +9,7 @@ export function Search() {
     <div className="max-w-2xl mx-auto my-20">
       <Card className="bg-white rounded-full">
         <CardBody className="p-0">
-          <form
-            className="flex items-center"
-            onSubmit={(e) => e.preventDefault()}
-          >
+          <form className="flex items-center" onSubmit={(e) => e.preventDefault()}>
             <Input
               className="flex-grow !shadow-none p-0"
               classNames={{
@@ -21,9 +18,7 @@ export function Search() {
               }}
               placeholder="Como podemos ajudar?"
               size="lg"
-              startContent={
-                <SearchIcon className="text-gray-400 w-5 h-5 mx-3" />
-              }
+              startContent={<SearchIcon className="text-gray-400 w-5 h-5 mx-3" />}
               type="search"
             />
             <Button

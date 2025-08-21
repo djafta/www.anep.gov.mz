@@ -4,15 +4,7 @@ import React from "react";
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
-import {
-  AtomIcon,
-  BuildingIcon,
-  ChevronRight,
-  CompassIcon,
-  HeartIcon,
-  NetworkIcon,
-  TractorIcon,
-} from "lucide-react";
+import { AtomIcon, BuildingIcon, ChevronRight, CompassIcon, HeartIcon, NetworkIcon, TractorIcon } from "lucide-react";
 
 import { Header } from "@/app/header";
 import { Footer } from "@/app/footer";
@@ -29,9 +21,8 @@ export default function HomePage() {
                 Autoridade Nacional da Educação Profissional
               </h1>
               <p className="text-xl text-gray-500 mb-12 leading-relaxed">
-                Promovendo a excelência na educação profissional em Moçambique
-                através de padrões rigorosos, inovação contínua e parcerias
-                estratégicas.
+                Promovendo a excelência na educação profissional em Moçambique através de padrões rigorosos, inovação
+                contínua e parcerias estratégicas.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button
@@ -66,9 +57,7 @@ export default function HomePage() {
                 { number: "15+", label: "Anos de Excelência" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-3xl font-bold text-[#003B71] mb-2">
-                    {stat.number}
-                  </div>
+                  <div className="text-3xl font-bold text-[#003B71] mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -81,14 +70,11 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Nossa Missão
-                </h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Nossa Missão</h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  A ANEP é responsável por gerir e supervisionar o sistema de
-                  educação profissional em Moçambique, garantindo que os
-                  programas educacionais atendam às necessidades do mercado de
-                  trabalho e promovam o desenvolvimento econômico do país.
+                  A ANEP é responsável por gerir e supervisionar o sistema de educação profissional em Moçambique,
+                  garantindo que os programas educacionais atendam às necessidades do mercado de trabalho e promovam o
+                  desenvolvimento econômico do país.
                 </p>
                 <div className="space-y-4">
                   {[
@@ -108,18 +94,15 @@ export default function HomePage() {
                 {[
                   {
                     title: "Qualidade",
-                    description:
-                      "Garantimos padrões rigorosos em todas as instituições acreditadas.",
+                    description: "Garantimos padrões rigorosos em todas as instituições acreditadas.",
                   },
                   {
                     title: "Inovação",
-                    description:
-                      "Promovemos métodos modernos de ensino e aprendizagem.",
+                    description: "Promovemos métodos modernos de ensino e aprendizagem.",
                   },
                   {
                     title: "Acessibilidade",
-                    description:
-                      "Facilitamos o acesso à educação profissional de qualidade.",
+                    description: "Facilitamos o acesso à educação profissional de qualidade.",
                   },
                   {
                     title: "Empregabilidade",
@@ -128,12 +111,8 @@ export default function HomePage() {
                 ].map((item) => (
                   <Card key={item.title} className="bg-gray-50 border-none">
                     <CardBody className="p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm">
-                        {item.description}
-                      </p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-sm">{item.description}</p>
                     </CardBody>
                   </Card>
                 ))}
@@ -146,39 +125,32 @@ export default function HomePage() {
         <section className="py-32 bg-gray-50" id="qualifications">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Áreas de Qualificação
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Áreas de Qualificação</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Oferecemos qualificações profissionais em diversas áreas, todas
-                alinhadas com as necessidades do mercado e padrões
-                internacionais.
+                Oferecemos qualificações profissionais em diversas áreas, todas alinhadas com as necessidades do mercado
+                e padrões internacionais.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   title: "Tecnologia da Informação",
-                  description:
-                    "Desenvolvimento de software, redes, segurança e análise de dados",
+                  description: "Desenvolvimento de software, redes, segurança e análise de dados",
                   icon: NetworkIcon,
                 },
                 {
                   title: "Engenharia",
-                  description:
-                    "Civil, mecânica, elétrica e outras especialidades técnicas",
+                  description: "Civil, mecânica, elétrica e outras especialidades técnicas",
                   icon: AtomIcon,
                 },
                 {
                   title: "Saúde",
-                  description:
-                    "Técnicas de enfermagem, laboratório e gestão hospitalar",
+                  description: "Técnicas de enfermagem, laboratório e gestão hospitalar",
                   icon: HeartIcon,
                 },
                 {
                   title: "Administração",
-                  description:
-                    "Gestão empresarial, finanças e recursos humanos",
+                  description: "Gestão empresarial, finanças e recursos humanos",
                   icon: BuildingIcon,
                 },
                 {
@@ -188,24 +160,16 @@ export default function HomePage() {
                 },
                 {
                   title: "Agricultura",
-                  description:
-                    "Técnicas agrícolas, gestão rural e agroindústria",
+                  description: "Técnicas agrícolas, gestão rural e agroindústria",
                   icon: TractorIcon,
                 },
               ].map((course) => (
-                <Card
-                  key={course.title}
-                  className="bg-white hover:shadow-lg transition-shadow duration-300"
-                >
+                <Card key={course.title} className="bg-white hover:shadow-lg transition-shadow duration-300">
                   <CardBody className="p-6 flex flex-col justify-between">
                     <div>
                       <course.icon className="w-6 h-6 text-[#003B71] mb-4" />
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        {course.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-4">
-                        {course.description}
-                      </p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{course.title}</h3>
+                      <p className="text-gray-600 text-sm mb-4">{course.description}</p>
                     </div>
                     <div className={"flex items-end"}>
                       <Button
@@ -228,12 +192,10 @@ export default function HomePage() {
         <section className="py-32" id="servicos">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Nossos Serviços
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Oferecemos uma gama completa de serviços para apoiar o
-                desenvolvimento da educação profissional em Moçambique.
+                Oferecemos uma gama completa de serviços para apoiar o desenvolvimento da educação profissional em
+                Moçambique.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -285,17 +247,13 @@ export default function HomePage() {
               ].map((service) => (
                 <Card key={service.title} className="bg-white">
                   <CardBody className="p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      {service.title}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
                     <ul className="space-y-3">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-3">
                           <div className="w-1.5 h-1.5 rounded-full bg-[#FFB81C]" />
-                          <span className="text-gray-600 text-sm">
-                            {feature}
-                          </span>
+                          <span className="text-gray-600 text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -310,12 +268,10 @@ export default function HomePage() {
         <section className="py-32 bg-gray-50" id="contato">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center max-w-2xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Entre em Contato
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Entre em Contato</h2>
               <p className="text-gray-600 mb-8">
-                Nossa equipe está disponível para ajudar com suas dúvidas sobre
-                educação profissional, certificações e processos de acreditação.
+                Nossa equipe está disponível para ajudar com suas dúvidas sobre educação profissional, certificações e
+                processos de acreditação.
               </p>
               <Button
                 as={Link}

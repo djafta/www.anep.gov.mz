@@ -38,9 +38,7 @@ export default function SignupPage() {
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-            Crie sua conta ANEP
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Crie sua conta ANEP</h1>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <Input
               required
@@ -82,10 +80,7 @@ export default function SignupPage() {
               value={formData.dateOfBirth}
               onChange={handleInputChange}
             />
-            <Button
-              className="w-full bg-[#003B71] text-white hover:bg-[#003B71]/90 transition-colors"
-              type="submit"
-            >
+            <Button className="w-full bg-[#003B71] text-white hover:bg-[#003B71]/90 transition-colors" type="submit">
               Criar Conta
             </Button>
           </form>
@@ -101,8 +96,7 @@ export default function SignupPage() {
       <footer className="bg-gray-50 border-t border-gray-200 py-3 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-sm text-gray-500 py-3">
-            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP).
-            Todos os direitos reservados.
+            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP). Todos os direitos reservados.
           </p>
         </div>
       </footer>

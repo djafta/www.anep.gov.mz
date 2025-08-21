@@ -4,14 +4,7 @@ import React from "react";
 import { Button, Link } from "@heroui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  ArrowLeft,
-  Calendar,
-  Tag,
-  ThumbsDown,
-  ThumbsUp,
-  User,
-} from "lucide-react";
+import { ArrowLeft, Calendar, Tag, ThumbsDown, ThumbsUp, User } from "lucide-react";
 
 import { Header } from "@/app/header";
 import { Footer } from "@/app/footer";
@@ -74,22 +67,13 @@ export default function NewsArticlePage() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="mx-auto px-4 py-16 max-w-3xl">
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Link
-            className="inline-flex items-center text-[#003B71] hover:underline mb-8"
-            href="/news"
-          >
+        <motion.div animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ duration: 0.5 }}>
+          <Link className="inline-flex items-center text-[#003B71] hover:underline mb-8" href="/news">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Voltar para Notícias
           </Link>
 
-          <h1 className="text-4xl font-bold mb-6 text-gray-900">
-            {article.title}
-          </h1>
+          <h1 className="text-4xl font-bold mb-6 text-gray-900">{article.title}</h1>
 
           <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-8">
             <div className="flex items-center">
@@ -107,12 +91,7 @@ export default function NewsArticlePage() {
           </div>
 
           <div className="relative h-[400px] mb-8 overflow-hidden rounded-lg">
-            <Image
-              alt={article.title}
-              layout="fill"
-              objectFit="cover"
-              src={article.image}
-            />
+            <Image alt={article.title} layout="fill" objectFit="cover" src={article.image} />
           </div>
 
           <div
@@ -121,9 +100,7 @@ export default function NewsArticlePage() {
           />
         </motion.div>
         <div className="mt-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Este artigo foi útil?
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Este artigo foi útil?</h2>
           <div className="flex space-x-4">
             <Button
               className="border-gray-300 hover:bg-gray-100 transition-colors"
@@ -142,9 +119,7 @@ export default function NewsArticlePage() {
           </div>
         </div>
         <div className="mt-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Artigos relacionados
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Artigos relacionados</h2>
           <ul className="space-y-2 ps-0 list-none">
             {article.relatedArticles.map((a, index) => (
               <li key={index}>

@@ -16,14 +16,7 @@ import {
   Tabs,
   Tab,
 } from "@heroui/react";
-import {
-  Search,
-  ChevronDown,
-  FileText,
-  Bookmark,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Search, ChevronDown, FileText, Bookmark, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -38,8 +31,7 @@ const qualifications = [
     category: "Tecnologia da Informação",
     level: "Nível 4",
     duration: "2 anos",
-    description:
-      "Desenvolva habilidades em programação, design de software e gestão de projetos de TI.",
+    description: "Desenvolva habilidades em programação, design de software e gestão de projetos de TI.",
   },
   {
     id: 2,
@@ -47,8 +39,7 @@ const qualifications = [
     category: "Engenharia",
     level: "Nível 5",
     duration: "5 anos",
-    description:
-      "Projete e supervisione a construção de edifícios, pontes, estradas e outras infraestruturas.",
+    description: "Projete e supervisione a construção de edifícios, pontes, estradas e outras infraestruturas.",
   },
   {
     id: 3,
@@ -56,8 +47,7 @@ const qualifications = [
     category: "Saúde",
     level: "Nível 3",
     duration: "18 meses",
-    description:
-      "Aprenda a fornecer cuidados essenciais aos pacientes e a apoiar os profissionais de saúde.",
+    description: "Aprenda a fornecer cuidados essenciais aos pacientes e a apoiar os profissionais de saúde.",
   },
   {
     id: 4,
@@ -65,8 +55,7 @@ const qualifications = [
     category: "Administração",
     level: "Nível 5",
     duration: "3 anos",
-    description:
-      "Desenvolva competências em recrutamento, treinamento e gestão de pessoal.",
+    description: "Desenvolva competências em recrutamento, treinamento e gestão de pessoal.",
   },
   {
     id: 5,
@@ -74,8 +63,7 @@ const qualifications = [
     category: "Turismo",
     level: "Nível 3",
     duration: "1 ano",
-    description:
-      "Aprenda a conduzir tours, compartilhar conhecimentos culturais e garantir experiências memoráveis.",
+    description: "Aprenda a conduzir tours, compartilhar conhecimentos culturais e garantir experiências memoráveis.",
   },
   {
     id: 6,
@@ -83,8 +71,7 @@ const qualifications = [
     category: "Agricultura",
     level: "Nível 4",
     duration: "2 anos",
-    description:
-      "Estude técnicas modernas de cultivo, gestão de safras e tecnologias agrícolas sustentáveis.",
+    description: "Estude técnicas modernas de cultivo, gestão de safras e tecnologias agrícolas sustentáveis.",
   },
   // Adicione mais qualificações conforme necessário
 ];
@@ -106,24 +93,21 @@ const featuredQualifications = [
     name: "Técnico em Inteligência Artificial",
     category: "Tecnologia da Informação",
     image: "/placeholder.svg",
-    description:
-      "Qualificação do Mês: Explore o futuro da tecnologia com nossa nova formação em IA.",
+    description: "Qualificação do Mês: Explore o futuro da tecnologia com nossa nova formação em IA.",
   },
   {
     id: 2,
     name: "Especialista em Energias Renováveis",
     category: "Engenharia",
     image: "/placeholder.svg",
-    description:
-      "Nova Qualificação: Contribua para um futuro sustentável com esta formação inovadora.",
+    description: "Nova Qualificação: Contribua para um futuro sustentável com esta formação inovadora.",
   },
   {
     id: 3,
     name: "Técnico em Saúde Digital",
     category: "Saúde",
     image: "/placeholder.svg",
-    description:
-      "Mais Procurada: Combine cuidados de saúde com tecnologia nesta qualificação em alta demanda.",
+    description: "Mais Procurada: Combine cuidados de saúde com tecnologia nesta qualificação em alta demanda.",
   },
 ];
 
@@ -155,23 +139,15 @@ export default function QualificationsPage() {
   }, [searchTerm, selectedCategory, selectedLevel]);
 
   const toggleFavorite = (id: number) => {
-    setFavorites((prev) =>
-      prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id],
-    );
+    setFavorites((prev) => (prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]));
   };
 
   const nextCarousel = () => {
-    setCarouselIndex(
-      (prevIndex) => (prevIndex + 1) % featuredQualifications.length,
-    );
+    setCarouselIndex((prevIndex) => (prevIndex + 1) % featuredQualifications.length);
   };
 
   const prevCarousel = () => {
-    setCarouselIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + featuredQualifications.length) %
-        featuredQualifications.length,
-    );
+    setCarouselIndex((prevIndex) => (prevIndex - 1 + featuredQualifications.length) % featuredQualifications.length);
   };
 
   return (
@@ -208,20 +184,11 @@ export default function QualificationsPage() {
                   <div
                     className={`absolute bottom-0 ${index % 2 == 0 ? "left-0" : "right-0 text-right"} p-4 text-white w-full`}
                   >
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
-                      {qual.name}
-                    </h2>
-                    <p className="text-sm sm:text-base md:text-lg mb-1 sm:mb-2">
-                      {qual.category}
-                    </p>
-                    <p className="text-xs sm:text-sm mb-2 line-clamp-2">
-                      {qual.description}
-                    </p>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">{qual.name}</h2>
+                    <p className="text-sm sm:text-base md:text-lg mb-1 sm:mb-2">{qual.category}</p>
+                    <p className="text-xs sm:text-sm mb-2 line-clamp-2">{qual.description}</p>
                     <Button className="bg-white font-medium  transition-colors text-xs sm:text-sm">
-                      <Link
-                        className={"text-[#003B71]"}
-                        href={`/qualifications/${qual.id}`}
-                      >
+                      <Link className={"text-[#003B71]"} href={`/qualifications/${qual.id}`}>
                         Saiba Mais
                       </Link>
                     </Button>
@@ -273,16 +240,10 @@ export default function QualificationsPage() {
                 aria-label="Categorias"
                 selectedKeys={[selectedCategory]}
                 selectionMode="single"
-                onSelectionChange={(keys) =>
-                  setSelectedCategory(Array.from(keys)[0] as string)
-                }
+                onSelectionChange={(keys) => setSelectedCategory(Array.from(keys)[0] as string)}
               >
                 {[
-                  ...categories.map((category) => (
-                    <DropdownItem key={category.name}>
-                      {category.name}
-                    </DropdownItem>
-                  )),
+                  ...categories.map((category) => <DropdownItem key={category.name}>{category.name}</DropdownItem>),
                   <DropdownItem key="Todas">Todas</DropdownItem>,
                 ]}
               </DropdownMenu>
@@ -301,26 +262,17 @@ export default function QualificationsPage() {
                 aria-label="Níveis"
                 selectedKeys={[selectedLevel]}
                 selectionMode="single"
-                onSelectionChange={(keys) =>
-                  setSelectedLevel(Array.from(keys)[0] as string)
-                }
+                onSelectionChange={(keys) => setSelectedLevel(Array.from(keys)[0] as string)}
               >
                 {[
-                  ...levels.map((level) => (
-                    <DropdownItem key={level}>{level}</DropdownItem>
-                  )),
+                  ...levels.map((level) => <DropdownItem key={level}>{level}</DropdownItem>),
                   <DropdownItem key={"Todos"}>Todos</DropdownItem>,
                 ]}
               </DropdownMenu>
             </Dropdown>
           </motion.div>
 
-          <Tabs
-            aria-label="Áreas de Qualificação"
-            className="mb-12"
-            color="primary"
-            variant="underlined"
-          >
+          <Tabs aria-label="Áreas de Qualificação" className="mb-12" color="primary" variant="underlined">
             <Tab key="todas" title="Todas">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                 {displayedQualifications.map((qual, index) => (
@@ -334,16 +286,10 @@ export default function QualificationsPage() {
                     <Card className="bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                       <CardBody className="p-6">
                         <div className="flex justify-between items-start mb-4">
-                          <h3 className="text-xl font-semibold text-gray-900">
-                            {qual.name}
-                          </h3>
+                          <h3 className="text-xl font-semibold text-gray-900">{qual.name}</h3>
                           <Button
                             isIconOnly
-                            className={
-                              favorites.includes(qual.id)
-                                ? "text-[#FFB81C]"
-                                : "text-gray-400"
-                            }
+                            className={favorites.includes(qual.id) ? "text-[#FFB81C]" : "text-gray-400"}
                             variant="light"
                             onClick={() => toggleFavorite(qual.id)}
                           >
@@ -351,14 +297,11 @@ export default function QualificationsPage() {
                           </Button>
                         </div>
                         <p className="text-gray-600 text-sm mb-4">
-                          <span className="font-medium">Categoria:</span>{" "}
-                          {qual.category}
+                          <span className="font-medium">Categoria:</span> {qual.category}
                           <br />
-                          <span className="font-medium">Nível:</span>{" "}
-                          {qual.level}
+                          <span className="font-medium">Nível:</span> {qual.level}
                           <br />
-                          <span className="font-medium">Duração:</span>{" "}
-                          {qual.duration}
+                          <span className="font-medium">Duração:</span> {qual.duration}
                         </p>
                         <p className="text-gray-700 mb-6">{qual.description}</p>
                       </CardBody>
@@ -392,16 +335,10 @@ export default function QualificationsPage() {
                         <Card className="bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                           <CardBody className="p-6">
                             <div className="flex justify-between items-start mb-4">
-                              <h3 className="text-xl font-semibold text-gray-900">
-                                {qual.name}
-                              </h3>
+                              <h3 className="text-xl font-semibold text-gray-900">{qual.name}</h3>
                               <Button
                                 isIconOnly
-                                className={
-                                  favorites.includes(qual.id)
-                                    ? "text-[#FFB81C]"
-                                    : "text-gray-400"
-                                }
+                                className={favorites.includes(qual.id) ? "text-[#FFB81C]" : "text-gray-400"}
                                 variant="light"
                                 onClick={() => toggleFavorite(qual.id)}
                               >
@@ -409,15 +346,11 @@ export default function QualificationsPage() {
                               </Button>
                             </div>
                             <p className="text-gray-600 text-sm mb-4">
-                              <span className="font-medium">Nível:</span>{" "}
-                              {qual.level}
+                              <span className="font-medium">Nível:</span> {qual.level}
                               <br />
-                              <span className="font-medium">Duração:</span>{" "}
-                              {qual.duration}
+                              <span className="font-medium">Duração:</span> {qual.duration}
                             </p>
-                            <p className="text-gray-700 mb-6">
-                              {qual.description}
-                            </p>
+                            <p className="text-gray-700 mb-6">{qual.description}</p>
                           </CardBody>
                           <CardFooter>
                             <Button
@@ -445,12 +378,7 @@ export default function QualificationsPage() {
 
           {pageCount > 1 && (
             <div className="flex justify-center mt-12">
-              <Pagination
-                className="text-[#003B71]"
-                page={currentPage}
-                total={pageCount}
-                onChange={setCurrentPage}
-              />
+              <Pagination className="text-[#003B71]" page={currentPage} total={pageCount} onChange={setCurrentPage} />
             </div>
           )}
         </div>

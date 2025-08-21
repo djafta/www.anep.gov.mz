@@ -48,8 +48,7 @@ const faqCategories = [
         detailLink: "/faq/niveis-qualificacao",
       },
       {
-        question:
-          "As qualificações da ANEP são reconhecidas internacionalmente?",
+        question: "As qualificações da ANEP são reconhecidas internacionalmente?",
         answer:
           "Muitas das qualificações da ANEP são reconhecidas internacionalmente, graças a acordos de reconhecimento mútuo com autoridades de qualificação de outros países. No entanto, é sempre recomendável verificar o reconhecimento específico da qualificação no país onde você pretende trabalhar ou estudar.",
         hasDetailedAnswer: true,
@@ -110,23 +109,13 @@ export default function FAQPage() {
             initial={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 + categoryIndex * 0.1 }}
           >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              {category.category}
-            </h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">{category.category}</h2>
             <Accordion variant="splitted">
               {category.questions.map((item, index) => (
-                <AccordionItem
-                  key={index}
-                  aria-label={item.question}
-                  className="mb-4"
-                  title={item.question}
-                >
+                <AccordionItem key={index} aria-label={item.question} className="mb-4" title={item.question}>
                   <p className="text-gray-600 mb-4">{item.answer}</p>
                   {item.hasDetailedAnswer && (
-                    <Link
-                      className="text-[#003B71] hover:underline flex items-center"
-                      href={item.detailLink}
-                    >
+                    <Link className="text-[#003B71] hover:underline flex items-center" href={item.detailLink}>
                       Ver mais <ChevronRight className="w-4 h-4 ml-1" />
                     </Link>
                   )}
@@ -162,26 +151,16 @@ export default function FAQPage() {
       <footer className="bg-gray-50 border-t border-gray-200 py-12 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-sm text-gray-500 mb-4">
-            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP).
-            Todos os direitos reservados.
+            &copy; 2024 Autoridade Nacional de Educação Profissional (ANEP). Todos os direitos reservados.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link
-              className="text-gray-400 hover:text-[#003B71] transition-colors text-xs"
-              href="#"
-            >
+            <Link className="text-gray-400 hover:text-[#003B71] transition-colors text-xs" href="#">
               Termos de Uso
             </Link>
-            <Link
-              className="text-gray-400 hover:text-[#003B71] transition-colors text-xs"
-              href="#"
-            >
+            <Link className="text-gray-400 hover:text-[#003B71] transition-colors text-xs" href="#">
               Política de Privacidade
             </Link>
-            <Link
-              className="text-gray-400 hover:text-[#003B71] transition-colors text-xs"
-              href="#"
-            >
+            <Link className="text-gray-400 hover:text-[#003B71] transition-colors text-xs" href="#">
               Contato
             </Link>
           </div>
