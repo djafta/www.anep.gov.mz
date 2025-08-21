@@ -33,13 +33,13 @@ export function MissionModal() {
           <ModalHeader className="flex flex-col gap-1">
             Nossa Missão
           </ModalHeader>
-          <ModalBody>
+          <ModalBody className="prose prose-lg max-w-none">
             <p>
               A missão da ANEP é transformar a educação profissional no Brasil,
               preparando indivíduos para os desafios do mercado de trabalho
               atual e futuro. Nosso compromisso é:
             </p>
-            <ul className="list-disc list-inside space-y-2">
+            <ul>
               <li>
                 Desenvolver qualificações de alta qualidade que atendam às
                 necessidades da indústria
@@ -58,7 +58,7 @@ export function MissionModal() {
                 profissionais altamente qualificados
               </li>
             </ul>
-            <p className="mt-4">
+            <p>
               Trabalhamos incansavelmente para criar um sistema educacional que
               capacite os indivíduos, impulsione a inovação e contribua para o
               crescimento sustentável do país.
