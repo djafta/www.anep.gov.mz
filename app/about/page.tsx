@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Header } from "@/app/about/header";
 import { Footer } from "@/app/footer";
 import { MissionModal } from "@/app/about/mission-modal";
-import { ContactFormModal } from "@/app/about/contact-form-modal";
 
 export default function SobrePage() {
   const timelineEvents = [
@@ -47,14 +46,15 @@ export default function SobrePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <Header/>
       <main className="overflow-hidden">
-        <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-[#003B71] to-[#0056a4]">
+        <section
+          className="relative h-screen flex items-center justify-center bg-gradient-to-r from-[#003B71] to-[#0056a4]">
           <motion.div
-            animate={{ opacity: 1, y: 0 }}
+            animate={ { opacity: 1, y: 0 } }
             className="text-center text-white z-10"
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
+            initial={ { opacity: 0, y: 50 } }
+            transition={ { duration: 1 } }
           >
             <h1 className="text-6xl font-bold mb-6">
               Moldando o Futuro da Educação Profissional
@@ -63,19 +63,20 @@ export default function SobrePage() {
               A ANEP está na vanguarda da inovação educacional, preparando
               profissionais para os desafios do amanhã.
             </p>
-            <MissionModal />
+            <MissionModal/>
           </motion.div>
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-20" />
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-20"/>
           </div>
         </section>
 
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto max-w-5xl">
             <motion.div
-              animate={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.8 }}
+              animate={ { opacity: 1, y: 0 } }
+              initial={ { opacity: 0, y: 50 } }
+              transition={ { duration: 0.8 } }
             >
               <h2 className="text-4xl font-bold text-center mb-12">
                 Nossa Visão
@@ -94,7 +95,7 @@ export default function SobrePage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={ 2 }
                       />
                     </svg>
                   </div>
@@ -117,7 +118,7 @@ export default function SobrePage() {
                         d="M13 10V3L4 14h7v7l9-11h-7z"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={ 2 }
                       />
                     </svg>
                   </div>
@@ -140,7 +141,7 @@ export default function SobrePage() {
                         d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={ 2 }
                       />
                     </svg>
                   </div>
@@ -157,41 +158,42 @@ export default function SobrePage() {
         <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto max-w-5xl">
             <motion.div
-              animate={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.8 }}
+              animate={ { opacity: 1, y: 0 } }
+              initial={ { opacity: 0, y: 50 } }
+              transition={ { duration: 0.8 } }
             >
               <h2 className="text-4xl font-bold text-center mb-16">
                 Nossa Jornada
               </h2>
               <div className="relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#003B71]" />
-                {timelineEvents.map((event, index) => (
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#003B71]"/>
+                { timelineEvents.map((event, index) => (
                   <div
-                    key={index}
-                    className={`mb-12 flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+                    key={ index }
+                    className={ `mb-12 flex ${ index % 2 === 0 ? "justify-start" : "justify-end" }` }
                   >
                     <motion.div
-                      animate={{ opacity: 1, x: 0 }}
-                      className={`w-5/12 ${index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"}`}
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      animate={ { opacity: 1, x: 0 } }
+                      className={ `w-5/12 ${ index % 2 === 0 ? "text-right pr-8" : "text-left pl-8" }` }
+                      initial={ { opacity: 0, x: index % 2 === 0 ? -50 : 50 } }
+                      transition={ { duration: 0.5, delay: index * 0.1 } }
                     >
                       <div
-                        className={`bg-white p-6 rounded-lg shadow-lg ${index % 2 === 0 ? "rounded-tr-none" : "rounded-tl-none"}`}
+                        className={ `bg-white p-6 rounded-lg shadow-lg ${ index % 2 === 0 ? "rounded-tr-none" : "rounded-tl-none" }` }
                       >
                         <h3 className="text-xl font-semibold mb-2">
-                          {event.year}
+                          { event.year }
                         </h3>
                         <h4 className="text-lg font-medium mb-2 text-[#003B71]">
-                          {event.event}
+                          { event.event }
                         </h4>
-                        <p className="text-gray-600">{event.description}</p>
+                        <p className="text-gray-600">{ event.description }</p>
                       </div>
                     </motion.div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#003B71] rounded-full mt-2 border-4 border-white" />
+                    <div
+                      className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#003B71] rounded-full mt-2 border-4 border-white"/>
                   </div>
-                ))}
+                )) }
               </div>
             </motion.div>
           </div>
@@ -200,10 +202,10 @@ export default function SobrePage() {
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto max-w-5xl">
             <motion.div
-              animate={{ opacity: 1, y: 0 }}
+              animate={ { opacity: 1, y: 0 } }
               className="text-center"
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.8 }}
+              initial={ { opacity: 0, y: 50 } }
+              transition={ { duration: 0.8 } }
             >
               <h2 className="text-4xl font-bold mb-8">Nosso Impacto</h2>
               <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
@@ -243,10 +245,10 @@ export default function SobrePage() {
         <section className="py-24 px-4 bg-[#003B71] text-white">
           <div className="max-w-7xl mx-auto max-w-5xl">
             <motion.div
-              animate={{ opacity: 1, y: 0 }}
+              animate={ { opacity: 1, y: 0 } }
               className="text-center"
-              initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.8 }}
+              initial={ { opacity: 0, y: 50 } }
+              transition={ { duration: 0.8 } }
             >
               <h2 className="text-4xl font-bold mb-8">
                 Junte-se à Nossa Missão
@@ -256,12 +258,11 @@ export default function SobrePage() {
                 podemos construir um futuro mais qualificado e próspero para
                 todos.
               </p>
-              <ContactFormModal />
             </motion.div>
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

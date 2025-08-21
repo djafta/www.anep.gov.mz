@@ -47,7 +47,7 @@ export function Header() {
           <Link
             as={NextLink}
             className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-            href="/licessing"
+            href="/licensing"
           >
             Licenciamento
           </Link>
@@ -101,7 +101,7 @@ export function Header() {
           <Link
             as={NextLink}
             className="w-full text-gray-600 hover:text-gray-900"
-            href="/licessing"
+            href="/licensing"
             size="lg"
           >
             Licenciamento
